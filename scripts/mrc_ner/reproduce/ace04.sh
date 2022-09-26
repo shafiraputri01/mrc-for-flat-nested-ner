@@ -29,8 +29,8 @@ PROGRESS_BAR=1
 OUTPUT_DIR=/content/outputs/mrc_ner/${TIME}/ace2004/large_lr${LR}_drop${MRC_DROPOUT}_norm${MAXNORM}_weight${SPAN_WEIGHT}_warmup${WARMUP}_maxlen${MAXLEN}
 mkdir -p ${OUTPUT_DIR}
 
-CUDA_VISIBLE_DEVICES=0,1 python ${REPO_PATH}/train/mrc_ner_trainer.py \
---gpus="2" \
+CUDA_VISIBLE_DEVICES=0 python ${REPO_PATH}/train/mrc_ner_trainer.py \
+--gpus="1" \
 --distributed_backend=ddp \
 --workers 0 \
 --data_dir ${DATA_DIR} \
