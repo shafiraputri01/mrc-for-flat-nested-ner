@@ -4,10 +4,10 @@
 # file: ace04.sh
 
 TIME=0910
-REPO_PATH=/userhome/xiaoya/mrc-for-flat-nested-ner
+REPO_PATH=/content/mrc-for-flat-nested-ner
 export PYTHONPATH="$PYTHONPATH:$REPO_PATH"
-DATA_DIR=/userhome/xiaoya/dataset/ace2004
-BERT_DIR=/userhome/xiaoya/bert/bert_uncased_large
+DATA_DIR=/content/dataset/ace2004
+BERT_DIR=/content/bert/bert_uncased_large
 
 BERT_DROPOUT=0.1
 MRC_DROPOUT=0.3
