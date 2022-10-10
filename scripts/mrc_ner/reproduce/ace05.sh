@@ -3,11 +3,11 @@
 
 # file: ace05.sh
 
-REPO_PATH=/userhome/xiaoya/mrc-for-flat-nested-ner
+REPO_PATH=/content/mrc-for-flat-nested-ner
 export PYTHONPATH="$PYTHONPATH:$REPO_PATH"
 
-DATA_DIR=/userhome/xiaoya/dataset/ace2005
-BERT_DIR=/userhome/xiaoya/bert/bert_uncased_large
+DATA_DIR=/content/dataset/ace2005
+BERT_DIR=/content/bert/bert_uncased_large
 
 BERT_DROPOUT=0.1
 MRC_DROPOUT=0.3
@@ -27,11 +27,11 @@ SPAN_CANDI=pred_and_gold
 PROGRESS_BAR=1
 OPTIM=adamw
 
-OUTPUT_DIR=/userhome/xiaoya/outputs/mrc_ner/ace2005/warmup${WARMUP}lr${LR}_drop${MRC_DROPOUT}_norm${MAXNORM}_weight${SPAN_WEIGHT}_warmup${WARMUP}_maxlen${MAXLEN}
+OUTPUT_DIR=/content/outputs/mrc_ner/ace2005/warmup${WARMUP}lr${LR}_drop${MRC_DROPOUT}_norm${MAXNORM}_weight${SPAN_WEIGHT}_warmup${WARMUP}_maxlen${MAXLEN}
 mkdir -p ${OUTPUT_DIR}
 
-CUDA_VISIBLE_DEVICES=0,1,2,3 python ${REPO_PATH}/train/mrc_ner_trainer.py \
---gpus="4" \
+CUDA_VISIBLE_DEVICES=0 python ${REPO_PATH}/train/mrc_ner_trainer.py \
+--gpus="1" \
 --distributed_backend=ddp \
 --workers 0 \
 --data_dir ${DATA_DIR} \
