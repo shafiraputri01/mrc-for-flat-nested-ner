@@ -10,7 +10,7 @@ DATA_DIR=/content/dataset/conll03
 BERT_DIR=/content/bert/bert_cased_large
 OUTPUT_BASE=/content/outputs
 
-BATCH=8
+BATCH=4
 GRAD_ACC=2
 BERT_DROPOUT=0.1
 MRC_DROPOUT=0.3
