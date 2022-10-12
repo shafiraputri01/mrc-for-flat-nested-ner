@@ -3,7 +3,7 @@
 
 # file: genia.sh
 
-REPO_PATH=/userhome/xiaoya/mrc-for-flat-nested-ner
+REPO_PATH=/content/mrc-for-flat-nested-ner
 export PYTHONPATH="$PYTHONPATH:$REPO_PATH"
 
 DATA_DIR=/content/dataset/genia
