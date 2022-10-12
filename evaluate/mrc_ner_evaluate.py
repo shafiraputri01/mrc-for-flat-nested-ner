@@ -8,8 +8,8 @@
 
 import sys
 from pytorch_lightning import Trainer
-from mrc_ner.train.mrc_ner_trainer import BertLabeling
-from mrc_ner.utils.random_seed import set_random_seed
+from train.mrc_ner_trainer import BertLabeling
+from utils.random_seed import set_random_seed
 
 set_random_seed(0)
 
